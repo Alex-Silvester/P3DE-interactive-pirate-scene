@@ -384,6 +384,7 @@
 "Assets/EazyCamera/Code/StateMachine/EzStateMachine.cs"
 "Assets/EazyCamera/Code/Util/ExtensionMethods.cs"
 "Assets/LowPolyWater_Pack/Scripts/LowPolyWater.cs"
+"Assets/MoveBoat.cs"
 -langversion:9.0
 
 /deterministic
