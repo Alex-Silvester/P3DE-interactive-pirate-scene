@@ -239,6 +239,11 @@ namespace EazyCamera
             }
         }
 
+        public void setRotationSpeed(float speed)
+        {
+            _settings.RotationSpeed = speed;
+        }
+
         private void ClampHorizontalRotation()
         {
             if (_rotation.y > 360f)
