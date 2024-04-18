@@ -5,6 +5,7 @@ using UnityEngine;
 public class CrateTrigger : MonoBehaviour
 {
     bool close_enough;
+    [SerializeField] ShowText text;
 
     // Start is called before the first frame update
     void Start()
@@ -21,11 +22,13 @@ public class CrateTrigger : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         close_enough = !close_enough;
+        text.show();
     }
 
     private void OnTriggerExit(Collider other)
     {
         close_enough = !close_enough;
+        text.show();
     }
 
     public bool closeEnough()
