@@ -20,7 +20,13 @@ public class ShowText : MonoBehaviour
 
     public void show()
     {
-        shown = !shown;
+        shown = true;
+        gameObject.SetActive(shown);
+    }
+
+    public void hide()
+    {
+        shown = false;
         gameObject.SetActive(shown);
     }
 }
