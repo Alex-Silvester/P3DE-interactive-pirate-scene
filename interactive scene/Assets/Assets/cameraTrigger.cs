@@ -11,6 +11,7 @@ public class cameraTrigger : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+
         player_camera.enabled = true;
         hut_camera.enabled = false;
     }

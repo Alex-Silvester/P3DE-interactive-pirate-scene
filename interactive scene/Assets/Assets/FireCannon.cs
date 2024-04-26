@@ -6,6 +6,7 @@ public class FireCannon : MonoBehaviour
 {
     [SerializeField] GameObject cannonBall;
     [SerializeField] CannonTrigger cannon;
+    [SerializeField] AudioSource audio_source;
     bool fired;
 
     Vector3 ballInitialPos;
@@ -20,6 +21,7 @@ public class FireCannon : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        //audio_source = GetComponent<AudioSource>();
         anim = GetComponent<Animator>();
 
         fired = false;
@@ -51,6 +53,7 @@ public class FireCannon : MonoBehaviour
             if (Input.GetMouseButtonDown(0) && !fired)
             {
                 anim.SetBool("Fire", true);
+                audio_source.Play();
                 fired = true;
             }
             if (Input.GetMouseButtonDown(1) && cannonBall.transform.position.y < 0 && fired)
