@@ -5,6 +5,7 @@ using UnityEngine;
 public class doorTrigger : MonoBehaviour
 {
     bool entered = true;
+    [SerializeField] AudioSource audio_source;
     // Start is called before the first frame update
     void Start()
     {
@@ -19,6 +20,7 @@ public class doorTrigger : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        audio_source.Play();
         entered = !entered;
     }
 
