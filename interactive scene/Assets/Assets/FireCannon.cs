@@ -15,9 +15,13 @@ public class FireCannon : MonoBehaviour
 
     [SerializeField] ShowText fire_text;
     [SerializeField] ShowText reload_text;
+
+    Animator anim;
     // Start is called before the first frame update
     void Start()
     {
+        anim = GetComponent<Animator>();
+
         fired = false;
         ballInitialPos = cannonBall.transform.position;
 
@@ -44,11 +48,12 @@ public class FireCannon : MonoBehaviour
                 }
             }
 
-            if (Input.GetMouseButtonDown(0))
+            if (Input.GetMouseButtonDown(0) && !fired)
             {
+                anim.SetBool("Fire", true);
                 fired = true;
             }
-            if (Input.GetMouseButtonDown(1) && cannonBall.transform.position.y < 0)
+            if (Input.GetMouseButtonDown(1) && cannonBall.transform.position.y < 0 && fired)
             {
                 fired = false;
                 cannonBall.transform.position = ballInitialPos;

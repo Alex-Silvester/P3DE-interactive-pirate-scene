@@ -362,6 +362,7 @@
 "Assets/Assets/FireCannon.cs"
 "Assets/Assets/OpenCrate.cs"
 "Assets/Assets/openDoor.cs"
+"Assets/Assets/Quit.cs"
 "Assets/Assets/ShowText.cs"
 "Assets/EazyCamera/Code/Animation/EzAnimator.cs"
 "Assets/EazyCamera/Code/Camera/EazyCam.cs"
