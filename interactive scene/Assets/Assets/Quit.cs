@@ -15,7 +15,6 @@ public class Quit : MonoBehaviour
     {
         if(Input.GetKeyDown(KeyCode.Escape))
         {
-            Debug.Log("Quit");
             Application.Quit();
         }   
     }
